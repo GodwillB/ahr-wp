@@ -452,3 +452,10 @@ color: #F9423A;
 }
 
 .
+
+
+.skip-lazy{
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}

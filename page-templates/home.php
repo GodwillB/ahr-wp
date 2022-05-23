@@ -110,6 +110,10 @@ get_header(); ?>
 
     </section>
 
+    <section class="py-1">
+      <?php echo do_shortcode('[sp_wpcarousel id="123"]'); ?>
+    </section>
+
  
 
     <section>
