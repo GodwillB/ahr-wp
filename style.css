@@ -47,10 +47,18 @@ html{
   font-size: 14px !important;
 }
 
+.f-90{
+  font-size:90px;
+}
+
 
 .f-16{
   font-size: 16px;
 }
+.f-18{
+  font-size: 18px;
+}
+
 
 .ahr-sec-text{
   color: #F9423A;
@@ -133,7 +141,7 @@ html{
 
 .heading{
   font-family: myFirstFont;
-  /* font-size: 66px; */
+
 }
 
 .heading-1{
@@ -273,7 +281,7 @@ html{
   position: absolute;
   right: 0;
   left: auto;
-  top: 430px;
+  top: 615px;
   z-index: 9999;
 
 }
@@ -317,7 +325,7 @@ color: #F9423A;
   line-height: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   footer h3{
     padding-top: 56px;
     font-size: 35px !important;
@@ -331,6 +339,18 @@ color: #F9423A;
   .ahr-sec-back .col-md-4{
     padding: 25px;
   }
+
+  .f-90{
+    font-size: 32px !important;
+    line-height: 120%;
+  }
+  .ahr-chat-absolute {
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 47%;
+    z-index: 9999;
+}
 }
 
 @media only screen and (max-width: 800px) {
@@ -356,5 +376,79 @@ color: #F9423A;
     font-size: 23px;
     text-align: center;
   }
+  /* .f-90{
+    font-size: 32px !important;
+    line-height: 120%;
+  } */
 
 }
+
+/* menu */
+
+.fa-brands{
+  padding-left: 10px;
+	padding-right: 10px;
+  color: black;
+}
+
+.fa-brands:hover{
+  color: #F9423A;
+}
+
+.button-58:hover{
+  color: #F9423A !important;
+  background-color: white;
+}
+
+.button-58:hover{
+  color: #F9423A !important;
+  background-color: white;
+	    border: 2px solid white;
+}
+
+.button-58:hover .span i {
+   color: #F9423A !important;
+}
+
+.button-58:hover .fa-arrow-right {
+    color:#F9423A !important;
+	
+}
+
+.button-55 {
+  align-items: center;
+  font-family: 'DM Sans', sans-serif;
+  /* text-transform:uppercase; */
+  background-color: #F9423A;
+  border: 2px solid #F9423A;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  /* font-family: Inter,sans-serif; */
+  /* font-size: 16px; */
+  /* font-weight: 600; */
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  /* line-height: 24px; */
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.

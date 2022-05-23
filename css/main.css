@@ -1,0 +1,9 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url("/css/fonts/GothamBlack.otf");
+}
+
+@font-face {
+  font-family: regular;
+  src: url("/css/fonts/G_ari_bd.TTF");
+}
