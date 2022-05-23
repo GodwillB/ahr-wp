@@ -22,7 +22,7 @@ get_header(); ?>
             <div class="text-left">
               <a href="">
                 
-                <svg width="233" style="float: left;" height="166" viewBox="0 0 233 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="233" class="logo" style="float: left;" height="166" viewBox="0 0 233 166" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_d_2456_146)">
                   <path d="M85.5037 42L42 105.008V106H53.2425L85.5037 58.8682V106H95.2799V42H85.5037Z" fill="white"/>
                   <path d="M124.119 69.2868H101.146V79.2093H124.119V106H133.896V42H124.119V69.2868Z" fill="white"/>
@@ -56,7 +56,7 @@ get_header(); ?>
                 </p>
             </a>
           </div>
-          <div class="row ml-auto p-4">
+          <div class="row ml-auto p-4 hide-on-mobile">
             <div class="col-md-6">
                <div class="d-inline float-start">
 
@@ -91,13 +91,63 @@ get_header(); ?>
               
           </div>
 
+         
+
         </div>
+        <div class="row hide-on-desktop">
+        <div class="d-inline float-start">
+
+<?php
+
+ // Check rows exists.
+ if( have_rows('partners') ):
+
+     // Loop through rows.
+     while( have_rows('partners') ) : the_row(); 
+   
+     ?>
+
+
+
+  <img style="padding:10px;" src="<?php echo get_sub_field('partner_logo'); ?>" alt="<?php echo the_title(); ?>" class="img-fluid pl-2 pr-2">
+
+   <?php
+
+   // End loop.
+   endwhile;
+
+   // No value.
+   else :
+       // Do something...
+   endif;
+
+   ?>
+
+</div>
+            
+
+            </div>
       </div>
     </section>
 
-    <section class="pt-3 pb-2">
+    <section class="pt-3 pb-2 hide-on-mobile">
       <p class="button-55 heading-1">FOLLOW US ON SOCIAL MEDIA</p>
       <div class="d-inline" style="background: hwb(0 98% 2% / 0.893);padding-left: 45%;padding-top: 14px;padding-bottom: 14px;padding-right: 30px;">
+
+      <?php
+                $args = array(
+                    'post_type' => array('socials'),
+                    'posts_per_page' => -1,
+                    'order' => 'DESC',
+                );
+
+                $ahrf_areas = new WP_Query( $args );
+
+                if ( $ahrf_areas->have_posts() ) {
+                    while ( $ahrf_areas->have_posts() ) {
+                        $ahrf_areas->the_post();
+
+                        ?>
 
    
   
@@ -105,7 +155,54 @@ get_header(); ?>
               <a href="<?php echo the_field('social_media_link'); ?>" class="text-decoration-none" target="_blank"><i class="fa-brands fa-xl fa-<?php echo the_field('choice_of_the_media'); ?>"></i></a>
             
               
-           
+              <?php 
+                    }
+                } else {
+                    echo "NO DATA";
+                }
+                ?>
+		        <?php wp_reset_postdata()?>
+      </div>
+
+    </section>
+
+
+    <section class="hide-on-desktop">
+      <div class="row">
+        <div class="w-50"><p class="button-599 heading">FOLLOW US ON SOCIAL MEDIA</p></div>
+        <div class="w-50">
+        <div class="d-inline text-right" style="text-align: center;float: right;margin-top: 7%;">
+
+<?php
+          $args = array(
+              'post_type' => array('socials'),
+              'posts_per_page' => -1,
+              'order' => 'DESC',
+          );
+
+          $ahrf_areas = new WP_Query( $args );
+
+          if ( $ahrf_areas->have_posts() ) {
+              while ( $ahrf_areas->have_posts() ) {
+                  $ahrf_areas->the_post();
+
+                  ?>
+
+
+
+
+        <a href="<?php echo the_field('social_media_link'); ?>" class="text-decoration-none" target="_blank"><i class="fa-brands fa-xl fa-<?php echo the_field('choice_of_the_media'); ?>"></i></a>
+      
+        
+        <?php 
+              }
+          } else {
+              echo "NO DATA";
+          }
+          ?>
+      <?php wp_reset_postdata()?>
+</div>
+        </div>
       </div>
 
     </section>
@@ -164,19 +261,22 @@ get_header(); ?>
         <h1 class="heading-1 f-40 text-white pt-5 pb-3">CASE STUDIES</h1>
 
         <div class="row pb-5">
-			<?php
-    
-    $args = array(
-    'post_type' => 'case_studies',
 
-    'posts_per_page' => -1,
-    // 'banking'=> 'corporate-institutional-banking',
-    
-    );
-    
-    $query = new WP_Query( $args ); ?>
+        <?php
+                $args = array(
+                    'post_type' => array('case_studies'),
+                    'posts_per_page' => -1,
+                    'order' => 'DESC',
+                );
 
-    <?php  while ( $query->have_posts() ) : $query->the_post(); ?>
+                $ahr_areas = new WP_Query( $args );
+
+                if ( $ahr_areas->have_posts() ) {
+                    while ( $ahr_areas->have_posts() ) {
+                        $ahr_areas->the_post();
+
+                        ?>
+      
 			
           <div class="col-md-4">
             <a class="ahr-sec-text" href="<?php echo the_permalink(); ?>" style="text-decoration: none;" >
@@ -199,10 +299,19 @@ get_header(); ?>
                     <i class="fa-solid ahr-sec-text fa-lg fa-arrow-right"></i>
                   </span>
 
-            </a>
+            </a></p>
           </div>
+
+
+          <?php 
+                    }
+                } else {
+                    echo "NO DATA";
+                }
+                ?>
+		        <?php wp_reset_postdata()?>
 			
-			<?php endwhile; ?>  
+		 
          
         
         </div>
@@ -220,9 +329,9 @@ get_header(); ?>
       background-size: cover;">
         <div class="bg-back">
           <div class="mx-auto py-5">
-            <h1 class="heading-1 f-48">SPEAK TO A SPECIALIST</h1>
-            <p class="text py-3">We’re a multi-award winning architecture and <br> building consultancy, founded in 1835.</p>
-            <a href="" style="text-decoration: none !important;" >
+            <h1 class="heading-1 f-48"><?php echo the_field('cta-title'); ?></h1>
+            <div class="text-arial p-4"><?php echo the_field('cta-desc'); ?></div>
+            <a href="<?php echo the_field('cta-link'); ?>" style="text-decoration: none !important;" >
 
             <div class="button-58-hover">
             <p class=" button-58">Get IN Touch

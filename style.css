@@ -149,6 +149,21 @@ html{
   font-size: 66px;
 }
 
+.heading-2{
+  font-family: myFirstFont;
+  font-size: 90px;
+  line-height: 84px;
+  /* identical to box height, or 93% */
+
+  text-align: center;
+  letter-spacing: -0.03em;
+
+  /* White */
+
+  color: #FFFFFF;
+
+}
+
 .text{
   font-family: 'DM Sans', sans-serif;
   font-size: 20px;
@@ -210,7 +225,7 @@ html{
 }
 
 
-/* CSS */
+
 .button-57 {
   align-items: center;
   font-family: 'DM Sans', sans-serif;
@@ -219,6 +234,41 @@ html{
   border: 2px solid #ffffff;
   box-sizing: border-box;
   color: #F9423A;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  /* font-family: Inter,sans-serif; */
+  /* font-size: 16px; */
+  /* font-weight: 600; */
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  /* line-height: 24px; */
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.button-57:hover {
+  align-items: center;
+  font-family: 'DM Sans', sans-serif;
+  /* text-transform:uppercase; */
+  background-color: #000000;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  color: #ffffff;
   cursor: pointer;
   display: inline-flex;
   fill: #000;
@@ -281,7 +331,7 @@ html{
   position: absolute;
   right: 0;
   left: auto;
-  top: 615px;
+  bottom: -24.7%;
   z-index: 9999;
 
 }
@@ -328,7 +378,8 @@ color: #F9423A;
 @media only screen and (max-width: 800px) {
   footer h3{
     padding-top: 56px;
-    font-size: 35px !important;
+    font-size: 20px !important;
+    font-weight: 800 !important;
   }
   footer li{
     font-size: 25px;
@@ -348,9 +399,30 @@ color: #F9423A;
     position: absolute;
     right: 0;
     left: auto;
-    top: 47%;
-    z-index: 9999;
+    top: 56%;
+    z-index: 99;
 }
+.heading-1 {
+  font-size: 30px !important;
+  /* font-family: 'Gotham'; */
+  font-size: 30px;
+  line-height: 120%;
+  /* text-align: center; */
+  letter-spacing: -0.03em;
+  /* color: #FFFFFF; */
+}
+.text{
+  font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 160%;
+}
+.logo-mobile{
+  width: 67px;
+height: 33px;
+}
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -415,6 +487,21 @@ color: #F9423A;
 	
 }
 
+.button-57:hover{
+  color: #ffffff !important;
+  background-color: rgb(0, 0, 0);
+	    border: 2px solid rgb(0, 0, 0);
+}
+
+.button-57:hover .span i {
+   color: #ffffff !important;
+}
+
+.button-57:hover .fa-arrow-right {
+    color:#ffffff !important;
+	
+}
+
 .button-55 {
   align-items: center;
   font-family: 'DM Sans', sans-serif;
@@ -451,11 +538,75 @@ color: #F9423A;
   text-transform: uppercase;
 }
 
-.
+.button-599 {
+  /* align-items: center; */
+  font-family: myFirstFont;
+  /* text-transform:uppercase; */
+  background-color: #F9423A;
+  border: 2px solid #F9423A;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  /* font-family: Inter,sans-serif; */
+  /* font-size: 16px; */
+  /* font-weight: 600; */
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  /* line-height: 24px; */
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  /* font-family: 'DM Sans'; */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
 
 
 .skip-lazy{
   height: 300px;
   width: 300px;
   object-fit: cover;
+}
+
+a:hover {
+  color: unset;
+}
+
+.text-arial{
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  text-align: center;
+  letter-spacing: 0.07em;
+  color: #FFFFFF;
+}
+
+.mobile-footer-link li{
+  font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 31px;
+/* or 22px */
+
+
+/* Navy Blue */
+
+color: #131E29;
+
 }
