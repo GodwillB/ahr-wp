@@ -180,3 +180,17 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+// add new menu
+function wpb_custom_new_menu() {
+  register_nav_menus(
+    array(
+      'main-menu' => __( 'Main Menu' ),
+		'services' => __( 'Services' ),
+		'sectors' => __( 'Sectors' ),
+		'fancy-menu' => __( 'Fancy Menu' ),
+      'about' => __( 'About' )
+    )
+  );
+}
+add_action( 'init', 'wpb_custom_new_menu' );

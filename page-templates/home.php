@@ -20,34 +20,26 @@ get_header(); ?>
         <div class="bg-back">
           <div class="row">
             <div class="text-left">
-              <a href="">
-                
-                <svg width="233" class="logo" style="float: left;" height="166" viewBox="0 0 233 166" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#filter0_d_2456_146)">
-                  <path d="M85.5037 42L42 105.008V106H53.2425L85.5037 58.8682V106H95.2799V42H85.5037Z" fill="white"/>
-                  <path d="M124.119 69.2868H101.146V79.2093H124.119V106H133.896V42H124.119V69.2868Z" fill="white"/>
-                  <path d="M151.493 42H140.739V51.9225H151.493C155.403 51.9225 159.802 55.8915 159.802 60.8527C159.802 65.814 156.381 69.2868 151.493 69.2868H140.739V74.7442L162.246 106H173V105.008L154.914 78.7132C160.617 77.3902 171.534 71.569 169.578 58.8682C167.623 46.1674 156.706 42.3307 151.493 42Z" fill="white"/>
-                  </g>
-                  <defs>
-                  <filter id="filter0_d_2456_146" x="-18" y="-18" width="251" height="184" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                  <feOffset/>
-                  <feGaussianBlur stdDeviation="30"/>
-                  <feColorMatrix type="matrix" values="0 0 0 0 0.188235 0 0 0 0 0.192157 0 0 0 0 0.2 0 0 0 0.3 0"/>
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2456_146"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2456_146" result="shape"/>
-                  </filter>
-                  </defs>
-                </svg>
-      
-              </a>
+              <a href="<?php echo home_url('/'); ?>">
+				 <img src="
+						   
+						<?php 
+						   
+                            $custom_logo_id = get_theme_mod( 'custom_logo' );
+						   
+                            $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                       
+							echo $image[0]; 
+						   
+						 ?>
+						   " class="logo" style="float: left;" height="166">
+				</a>
       
             </div>
           </div>
           <div class=" row mx-auto py-3">
             <h1 class="heading f-90"><?php echo the_field('banner_title'); ?></h1>
-            <p class="text py-3"><?php echo the_field('banner_content'); ?></p>
+            <p class="text py-3 text-arial"><?php echo the_field('banner_content'); ?></p>
             <a href="<?php echo the_field('button_link'); ?>" style="text-decoration: none !important;" >
               <p class="button-58"><?php echo the_field('button_title'); ?>
                 <span style="margin-left: 12px;" >
@@ -231,8 +223,8 @@ get_header(); ?>
           <div class="col-md-6">
             <h1 class="heading-1 f-48 ahr-sec-text py-2"><?php echo the_field('white_title'); ?></h1>
 
-            <div class="border-right">
-              <div class="text f-18"><?php echo the_field('white_background_content'); ?>	</div>
+            <div class="border-right content-18">
+              <div class="text-f-18"><?php echo the_field('white_background_content'); ?>	</div>
 
             </div>
            
@@ -322,7 +314,7 @@ get_header(); ?>
 
 
     <section>
-      <div class="m-3 container-2" style="background: url(https://clients.belva.co.ke/sandbox/wp-content/uploads/2022/05/The-Spine-royal-college-of-physicians-1.png) no-repeat center center; 
+      <div class="m-3 container-2" style="background: url(<?php echo the_field('cta-header'); ?>) no-repeat center center; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;

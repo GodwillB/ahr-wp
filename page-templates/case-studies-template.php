@@ -21,24 +21,18 @@ get_header(); ?>
             <div class="text-left">
               <a href="<?php echo home_url('/'); ?>">
                 
-                <svg width="233" style="float: left;" height="166" viewBox="0 0 233 166" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#filter0_d_2456_146)">
-                  <path d="M85.5037 42L42 105.008V106H53.2425L85.5037 58.8682V106H95.2799V42H85.5037Z" fill="white"/>
-                  <path d="M124.119 69.2868H101.146V79.2093H124.119V106H133.896V42H124.119V69.2868Z" fill="white"/>
-                  <path d="M151.493 42H140.739V51.9225H151.493C155.403 51.9225 159.802 55.8915 159.802 60.8527C159.802 65.814 156.381 69.2868 151.493 69.2868H140.739V74.7442L162.246 106H173V105.008L154.914 78.7132C160.617 77.3902 171.534 71.569 169.578 58.8682C167.623 46.1674 156.706 42.3307 151.493 42Z" fill="white"/>
-                  </g>
-                  <defs>
-                  <filter id="filter0_d_2456_146" x="-18" y="-18" width="251" height="184" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                  <feOffset/>
-                  <feGaussianBlur stdDeviation="30"/>
-                  <feColorMatrix type="matrix" values="0 0 0 0 0.188235 0 0 0 0 0.192157 0 0 0 0 0.2 0 0 0 0.3 0"/>
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2456_146"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2456_146" result="shape"/>
-                  </filter>
-                  </defs>
-                </svg>
+             	<img src="
+						   
+						<?php 
+						   
+                            $custom_logo_id = get_theme_mod( 'custom_logo' );
+						   
+                            $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                       
+							echo $image[0]; 
+						   
+						 ?>
+						   " class="logo" style="float: left;" height="166">
       
               </a>
       
@@ -53,15 +47,49 @@ get_header(); ?>
       </div>
     </section>
 
-    <section style="background: #F9F9F9;" class="py-3">
-      <div class="container py-4">
+    <section style="" class="py-1">
+      <div class="container py-1">
+        <div class="hide-on-mobile">
+        <div class="row py-1">
+          <div class="col-md-8"></div>
+          <div class="col-md-4">
+          <form role="search" method="get" style="position: relative;top: 170%;" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="">
+              <div class="input-group" >
+                <input type="search" value="<?php echo get_search_query(); ?>" name="s" class="form-control search-form"  placeholder="SEARCH FOR A CASE STUDY...">
+                  <div class="input-group-append">
+                    <button class="btn btn-secondary search-button" type="button">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+          </form>
+        </div>
+        </div>
+        <div class="hide-on-desktop">
+        <div class="container py-4">
+          <div class="col-md-8"></div>
+          <div class="col-md-4">
+          <form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="">
+              <div class="input-group" >
+                <input type="search" value="<?php echo get_search_query(); ?>" name="s" class="form-control search-form"  placeholder="SEARCH FOR A CASE STUDY...">
+                  <div class="input-group-append">
+                    <button class="btn btn-secondary search-button" type="button">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+          </form>
+        </div>
+        </div>
 		  <div class="row py-4 mx-auto">
       <div class="tabs">
-  <input type="radio" name="tabs" id="tabone" checked="checked">
-  <label for="tabone">All Categories</label>
-  <div class="tab">
+      <input type="radio" name="tabs" id="tabone" checked="checked">
+        <label for="tabone">All Categories</label>
+          <div class="tab">
     <!-- <h1>Tab One Content</h1> -->
-    <div class="row">
+            <div class="row">
 			
         <?php
         
@@ -99,10 +127,10 @@ get_header(); ?>
 
 
               <div class="border-right text-black pl-3">
-                <div class="text text-black" style="font-weight: 400;font-size: 14px; color: black;overflow: hidden;display: -webkit-box; -webkit-line-clamp: 4;-webkit-box-orient: vertical;"><?php echo the_excerpt(); ?> </div>
+                <div class="text text-black" style="font-weight: 400;font-size: 14px; color: black;overflow: hidden;display: -webkit-box; -webkit-line-clamp: 4;-webkit-box-orient: vertical;"><?php echo the_field('intro_text'); ?></div>
               </div>
 
-              <p class="text-black button-58 my-3">Read More
+              <p class="text-black button-58 my-3 " style="font-size: 14px;">Read More
                 <span style="margin-left: 12px;" >
                   <i class="fa-solid text-white fa-lg fa-arrow-right"></i>
                 </span>
@@ -157,10 +185,10 @@ get_header(); ?>
 
 
             <div class="border-right text-black pl-3">
-              <div class="text text-black" style="font-weight: 400;font-size: 14px; color: black;overflow: hidden;display: -webkit-box; -webkit-line-clamp: 4;-webkit-box-orient: vertical;"><?php echo the_excerpt(); ?> </div>
+              <div class="text text-black" style="font-weight: 400;font-size: 14px; color: black;overflow: hidden;display: -webkit-box; -webkit-line-clamp: 4;-webkit-box-orient: vertical;"><?php echo the_field('intro_text'); ?> </div>
             </div>
 
-            <p class="text-black button-58 my-3">Read More
+            <p class="text-black button-58 my-3" style="font-size: 14px;">Read More
               <span style="margin-left: 12px;" >
                 <i class="fa-solid text-white fa-lg fa-arrow-right"></i>
               </span>
@@ -215,10 +243,10 @@ get_header(); ?>
 
 
             <div class="border-right text-black pl-3">
-              <div class="text text-black" style="font-weight: 400;font-size: 14px; color: black;overflow: hidden;display: -webkit-box; -webkit-line-clamp: 4;-webkit-box-orient: vertical;"><?php echo the_excerpt(); ?> </div>
+              <div class="text text-black" style="font-weight: 400;font-size: 14px; color: black;overflow: hidden;display: -webkit-box; -webkit-line-clamp: 4;-webkit-box-orient: vertical;"><?php echo the_field('intro_text'); ?></div>
             </div>
 
-            <p class="text-black button-58 my-3">Read More
+            <p class="text-black button-58 my-3" style="font-size: 14px;">Read More
               <span style="margin-left: 12px;" >
                 <i class="fa-solid text-white fa-lg fa-arrow-right"></i>
               </span>
@@ -273,10 +301,10 @@ get_header(); ?>
 
 
             <div class="border-right text-black pl-3">
-              <div class="text text-black" style="font-weight: 400;font-size: 14px; color: black;overflow: hidden;display: -webkit-box; -webkit-line-clamp: 4;-webkit-box-orient: vertical;"><?php echo the_excerpt(); ?> </div>
+              <div class="text text-black" style="font-weight: 400;font-size: 14px; color: black;overflow: hidden;display: -webkit-box; -webkit-line-clamp: 4;-webkit-box-orient: vertical;"><?php echo the_field('intro_text'); ?> </div>
             </div>
 
-            <p class="text-black button-58 my-3">Read More
+            <p class="text-black button-58 my-3" style="font-size: 14px;">Read More
               <span style="margin-left: 12px;" >
                 <i class="fa-solid text-white fa-lg fa-arrow-right"></i>
               </span>
@@ -303,7 +331,7 @@ get_header(); ?>
   order: 1;
     // Put the labels first: ;
     display: block;
-    padding: 1rem 2rem;
+   padding: 10px 16px;
     margin-right: 0.2rem;
     cursor: pointer;
     /* background: #F9F9F9; */
@@ -325,7 +353,7 @@ color: #F9423A;
 	flex-grow: 1;
 	width: 100%;
 	display: none;
-	padding: 1rem;
+	    padding: 2rem 1rem;
 	/* background: #fff; */
 }
 .tabs input[type="radio"] {

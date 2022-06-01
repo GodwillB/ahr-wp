@@ -331,7 +331,7 @@ html{
   position: absolute;
   right: 0;
   left: auto;
-  bottom: -24.7%;
+      bottom: -24.7%;
   z-index: 9999;
 
 }
@@ -372,7 +372,7 @@ color: #F9423A;
 
 
 .fancy-submenu h3{
-  line-height: 20px;
+  line-height: 26px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -421,6 +421,24 @@ line-height: 160%;
 .logo-mobile{
   width: 67px;
 height: 33px;
+}
+
+.heading-2 {
+  font-family: myFirstFont;
+  font-size: 32px;
+  line-height: 84px;
+  text-align: center;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  
+}
+
+.page-template-case-studies-template .ahr-chat-absolute{
+  position: absolute;
+  right: 0;
+  left: auto;
+  top: 33%;
+  z-index: 99;
 }
 
 }
@@ -609,4 +627,33 @@ line-height: 31px;
 
 color: #131E29;
 
+}
+
+.search-button{
+  width: 39px;
+    height: 39px;
+    background: #F9423A;
+    border: none;
+    border-radius: 0px;
+}
+
+.search-form{
+  background: #e6e6e6;
+    border: none;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #131E29;
+    font-weight: 700;
+    font-family: 'DM Sans';
+}
+
+.content-18 p{
+	font-size: 18px !important;
+}
+
+.text-f-18{
+	font-size: 18px !important;
+	font-family: 'DM Sans', sans-serif;
 }

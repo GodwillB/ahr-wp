@@ -15,12 +15,12 @@
       <div class="container">
         <div class="row py-5">
           <div class="col-md-3 text-left">
-            <div class="row"><img src="<?php echo home_url('/'); ?>wp-content/uploads/2022/05/Vector-5.svg" alt="" style="width: 170px;
+            <div class="row"><img src="<?php echo home_url('/'); ?>wp-content/uploads/2022/05/Vector-6.svg" alt="" style="width: 170px;
 height: 84px;" class="img-fluid"></div>
             <div class="row pt-4">
             <div class="d-inline" style="">
 
-<?php
+		<?php
           $args = array(
               'post_type' => array('socials'),
               'posts_per_page' => -1,
@@ -65,52 +65,92 @@ height: 84px;" class="img-fluid"></div>
           </div>
           <div class="col-md-2">
             <h3 class="dm fw-bold f-16 pb-3 text-right">About Us</h3>
-            <ul class="list-unstyled text f-14 text-right">
-              <li>Management</li>
-              <li>Our People</li>
-              <li>About Us</li>
-              <li>CSR</li>
-              <li>Careers</li>
+            <ul class="list-unstyled text f-14 text-right f-line-height">
+              <?php
+				wp_nav_menu(
+					array(
+						'container_id'    => '',
+						'container_class' => 'list-unstyled text f-14',
+						'menu_class'      => 'p-unset',
+						'container'         => 'div',
+						'depth'            => 2, 
+						'menu_id'      => '',
+						'theme_location'  => 'about',
+						'li_class'        => '',
+						'fallback_cb'     => false,
+					)
+				);
+				?>
             </ul>
 
           </div>
           <div class="col-md-2">
             <h3 class="dm f-16 pb-3 text-right">Services</h3>
 
-            <ul class="list-unstyled text f-14 text-right">
-              <li>Interior Design</li>
-              <li>Construction</li>
-              <li>Architecture</li>
-              <li>Rentals</li>
-              <li>About Us</li>
+            <ul class="list-unstyled text f-14 text-right f-line-height">
+              <?php
+				wp_nav_menu(
+					array(
+						'container_id'    => '',
+						'container_class' => 'list-unstyled text f-14',
+						'menu_class'      => 'p-unset',
+						'container'         => 'div',
+						'depth'            => 2, 
+						'menu_id'      => '',
+						'theme_location'  => 'services',
+						'li_class'        => '',
+						'fallback_cb'     => false,
+					)
+				);
+				?>
             </ul>
 
           </div>
           <div class="col-md-2">
             <h3 class="dm f-16 pb-3 text-right">Sectors</h3>
 
-            <ul class="list-unstyled text f-14 text-right">
-              <li>Real Estate</li>
-              <li>Banking</li>
-              <li>Hospitality</li>
-<!--               <li>About Us</li>
-              <li>About Us</li> -->
+            <ul class="list-unstyled text f-14 text-right f-line-height">
+              <?php
+				wp_nav_menu(
+					array(
+						'container_id'    => '',
+						'container_class' => 'list-unstyled text f-14',
+						'menu_class'      => 'p-unset',
+						'container'         => 'div',
+						'depth'            => 2, 
+						'menu_id'      => '',
+						'theme_location'  => 'sectors',
+						'li_class'        => '',
+						'fallback_cb'     => false,
+					)
+				);
+				?>
             </ul>
 
           </div>
-          <div class="col-md-2 fancy-submenu text-right">
-            <h3 class="dm f-16">Careers</h3>
-            <h3 class="dm f-16">Contact Us</h3>
-            <h3 class="dm f-16">Media</h3>
-            <h3 class="dm f-16">Press Release</h3>
-            <h3 class="dm f-16">Sectors</h3>
+          <div class="col-md-2 fancy-submenu text-right f-line-height">
+            <?php
+				wp_nav_menu(
+					array(
+						'container_id'    => '',
+						'container_class' => 'list-unstyled text f-14',
+						'menu_class'      => 'p-unset',
+						'container'         => 'div',
+						'depth'            => 2, 
+						'menu_id'      => '',
+						'theme_location'  => 'fancy-menu',
+						'li_class'        => '',
+						'fallback_cb'     => false,
+					)
+				);
+				?>
           </div>
 
         </div>
 
         <div class="row py-3" style="border-top: 2px solid #F9423A;;">
           <div class="col-md-3">
-            <p class="dm f-16 fw-normal">© AHR Group Limited 2021</p>
+            <p class="dm f-16 fw-normal">© AHR Group Limited <?php echo date('Y'); ?></p>
           </div>
           <div class="col-md-4">
             <div class="d-inline">
@@ -190,11 +230,21 @@ height: 84px;" class="img-fluid"></div>
           <div class="col-md-2">
             <h3 class="dm fw-bold f-16 pb-3 text-center">About Us</h3>
             <ul class="list-unstyled mobile-footer-link text-center">
-              <li>Our People</li>
-              <li>Campaigns</li>
-              <li>PCKO</li>
-              <!-- <li>About Us</li>
-              <li>About Us</li> -->
+              <?php
+				wp_nav_menu(
+					array(
+						'container_id'    => '',
+						'container_class' => 'list-unstyled text f-14',
+						'menu_class'      => 'p-unset',
+						'container'         => 'div',
+						'depth'            => 2, 
+						'menu_id'      => '',
+						'theme_location'  => 'about',
+						'li_class'        => '',
+						'fallback_cb'     => false,
+					)
+				);
+				?>
             </ul>
 
           </div>
@@ -202,11 +252,21 @@ height: 84px;" class="img-fluid"></div>
             <h3 class="dm f-16 pb-3 text-center">Services</h3>
 
             <ul class="list-unstyled mobile-footer-link text-center">
-              <li>Architecture</li>
-              <li>Building Consultancy</li>
-              <li>Sustainable Design</li>
-              <li>Interior Design</li>
-              <li>Masterplanning</li>
+              <?php
+				wp_nav_menu(
+					array(
+						'container_id'    => '',
+						'container_class' => 'list-unstyled text f-14',
+						'menu_class'      => 'p-unset',
+						'container'         => 'div',
+						'depth'            => 2, 
+						'menu_id'      => '',
+						'theme_location'  => 'services',
+						'li_class'        => '',
+						'fallback_cb'     => false,
+					)
+				);
+				?>
             </ul>
 
           </div>
@@ -218,7 +278,7 @@ height: 84px;" class="img-fluid"></div>
         <div class="py-3" style="border-top: 2px solid #F9423A;;">
           <div class="row">
             <p class="dm f-16 fw-normal" style="
-            text-align: center;">© AHR Group Limited 2021</p>
+            text-align: center;">© AHR Group Limited <?php echo date('Y'); ?></p>
           </div>
 
           <div class="row">
@@ -239,12 +299,7 @@ height: 84px;" class="img-fluid"></div>
           </div>
          
           <div class="row">
-            <p class="dm f-16 fw-normal" style="font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 29px;
-text-align: center;">SITE BY STAXO</p>
+            <p class="dm f-16 fw-normal text-center" style="font-family: 'DM Sans';font-style: normal;font-weight: 400;font-size: 16px;line-height: 29px;text-align: center;">SITE BY STAXO</p>
           </div>
 
         </div>
